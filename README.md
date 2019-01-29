@@ -2,7 +2,7 @@
 
 ### Installation
 
-Installation through composer
+Installation throught composer
 
 ```
 composer global require "kritik94/brain-games"
