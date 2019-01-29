@@ -9,5 +9,7 @@
             "email": "niktyper13@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "v0.11.11"
+    }
 }
