@@ -9,6 +9,14 @@
             "email": "niktyper13@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "BrainGames\\": "src"
+        },
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "require": {
         "wp-cli/php-cli-tools": "v0.11.11"
     }
