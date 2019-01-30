@@ -2,8 +2,6 @@ language: php
 php:
     - 7.1
     - 7.2
-before_install:
-  - echo "extension = simplexml.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 install:
   - composer install
 script:
