@@ -1,8 +1,10 @@
 {
     "name": "kritik94/brain-games",
     "bin": ["bin/brain-games"],
-    "type": "library",
+    "type": "project",
     "license": "MIT",
+    "keywords": ["cli", "games"],
+    "description": "small cli brain games",
     "authors": [
         {
             "name": "Nikita Arkhipov",
