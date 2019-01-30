@@ -2,6 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/b747e0e5993ba981e8f3/maintainability)](https://codeclimate.com/github/kritik94/project-lvl1-s426/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b747e0e5993ba981e8f3/test_coverage)](https://codeclimate.com/github/kritik94/project-lvl1-s426/test_coverage)
+[![Build Status](https://travis-ci.org/kritik94/project-lvl1-s426.svg?branch=master)](https://travis-ci.org/kritik94/project-lvl1-s426)
 
 ### Installation
 
