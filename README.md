@@ -12,10 +12,15 @@ Install throught composer
 composer global require "kritik94/brain-games"
 ```
 
+[![asciicast](https://asciinema.org/a/jcD1L5LKo34Jrpx34N9bQFWmS.svg)](https://asciinema.org/a/jcD1L5LKo34Jrpx34N9bQFWmS)
+
 ### Play
 
 Make sure you have the composer bin dir in your PATH
 
 ```
-brain-games
+brain-even
 ```
+
+
+

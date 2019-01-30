@@ -1,6 +1,9 @@
 {
     "name": "kritik94/brain-games",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "type": "project",
     "license": "MIT",
     "keywords": ["cli", "games"],
