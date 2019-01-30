@@ -22,5 +22,4 @@ Make sure you have the composer bin dir in your PATH
 brain-even
 ```
 
-
-
+[![asciicast](https://asciinema.org/a/7xpC3HQbEoyhhs8TzfE7f6SKi.svg)](https://asciinema.org/a/7xpC3HQbEoyhhs8TzfE7f6SKi)
