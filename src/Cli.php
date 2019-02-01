@@ -39,4 +39,3 @@ function run($genRiddle = null, $description = '')
 
     line('Congratulations, %s!', $name);
 }
-
