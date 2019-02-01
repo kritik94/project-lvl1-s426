@@ -20,7 +20,7 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/Even.php"
+            "src/Games/Even.php"
         ]
     },
     "require": {

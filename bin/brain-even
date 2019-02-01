@@ -9,5 +9,7 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-\BrainGames\Even\run();
-
+\BrainGames\Cli\run(
+    '\BrainGames\Games\Even\genRiddle',
+    \BrainGames\Games\Even\DESCRIPTION
+);
