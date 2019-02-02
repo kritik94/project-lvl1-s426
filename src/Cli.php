@@ -24,3 +24,11 @@ function runCalc()
         \BrainGames\Game\Calc\DESCRIPTION
     );
 }
+
+function runGcd()
+{
+    run(
+        '\BrainGames\Game\Gcd\genRiddle',
+        \BrainGames\Game\Gcd\DESCRIPTION
+    );
+}
