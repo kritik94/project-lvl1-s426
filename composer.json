@@ -2,7 +2,8 @@
     "name": "kritik94/brain-games",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "project",
     "license": "MIT",
