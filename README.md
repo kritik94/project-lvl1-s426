@@ -23,3 +23,9 @@ brain-even
 ```
 
 [![asciicast](https://asciinema.org/a/7xpC3HQbEoyhhs8TzfE7f6SKi.svg)](https://asciinema.org/a/7xpC3HQbEoyhhs8TzfE7f6SKi)
+
+```
+brain-calc
+```
+
+[![asciicast](https://asciinema.org/a/EiGdLOG7vXF8sISVtX5F4H2gR.svg)](https://asciinema.org/a/EiGdLOG7vXF8sISVtX5F4H2gR)
