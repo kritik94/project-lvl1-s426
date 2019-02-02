@@ -2,7 +2,7 @@
 
 namespace BrainGames\Game\Gcd;
 
-const DESCRIPTION = 'Find the greatest common divisor of given numbers.' ;
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function genRiddle()
 {
@@ -20,7 +20,9 @@ function genRiddle()
 
 function findGcd(int $first, int $second)
 {
-    for ($potential = $first; $potential > 0; $potential--) {
+    $minimalNumber = min($first, $second);
+
+    for ($potential = $minimalNumber; $potential > 0; $potential--) {
         if ($first % $potential === 0 && $second % $potential === 0) {
             return $potential;
         }

@@ -2,7 +2,7 @@
 
 namespace BrainGames\Game\Progression;
 
-const DESCRIPTION = 'What number is missing in the progression?' ;
+const DESCRIPTION = 'What number is missing in the progression?';
 const PROGRESSION_STEPS = 10;
 
 function genRiddle()

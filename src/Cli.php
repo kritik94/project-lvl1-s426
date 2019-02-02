@@ -40,3 +40,11 @@ function runProgression()
         \BrainGames\Game\Progression\DESCRIPTION
     );
 }
+
+function runPrime()
+{
+    run(
+        '\BrainGames\Game\Prime\genRiddle',
+        \BrainGames\Game\Prime\DESCRIPTION
+    );
+}
