@@ -32,3 +32,11 @@ function runGcd()
         \BrainGames\Game\Gcd\DESCRIPTION
     );
 }
+
+function runProgression()
+{
+    run(
+        '\BrainGames\Game\Progression\genRiddle',
+        \BrainGames\Game\Progression\DESCRIPTION
+    );
+}
