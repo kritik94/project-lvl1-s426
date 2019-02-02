@@ -29,3 +29,9 @@ brain-calc
 ```
 
 [![asciicast](https://asciinema.org/a/EiGdLOG7vXF8sISVtX5F4H2gR.svg)](https://asciinema.org/a/EiGdLOG7vXF8sISVtX5F4H2gR)
+
+```
+brain-gcd
+```
+
+[![asciicast](https://asciinema.org/a/ONDcIiqdiG0BpkIPm4nCuCoJR.svg)](https://asciinema.org/a/ONDcIiqdiG0BpkIPm4nCuCoJR)
