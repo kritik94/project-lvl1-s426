@@ -2,40 +2,25 @@
 
 namespace BrainGames\Cli;
 
-use function \cli\line;
-use function \cli\prompt;
+use function \BrainGames\Engine\run;
 
-const RIGHT_ANSWERS_FOR_WINNING = 3;
-
-function run($genRiddle = null, $description = '')
+function runPromt()
 {
-    line('Welcome to the Brain Game!');
-    line($description . PHP_EOL);
+    run();
+}
 
-    $name = prompt('May I have your name?', false, ' ');
-    line("Hello, %s!" . PHP_EOL, $name);
+function runEven()
+{
+    run(
+        '\BrainGames\Game\Even\genRiddle',
+        \BrainGames\Game\Even\DESCRIPTION
+    );
+}
 
-    if (is_null($genRiddle)) {
-        return;
-    }
-
-    for ($step = 1; $step <= RIGHT_ANSWERS_FOR_WINNING; $step++) {
-        $riddle = $genRiddle();
-        $question = $riddle['question'];
-        $correctAnswer = $riddle['answer'];
-
-        line('Question: %s', $question);
-        $answer = prompt('Your answer', false, ': ');
-
-        if ($answer === $correctAnswer) {
-            line('Correct!');
-        } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-            line("Let's try again, Bill!");
-
-            return;
-        }
-    }
-
-    line('Congratulations, %s!', $name);
+function runCalc()
+{
+    run(
+        '\BrainGames\Game\Calc\genRiddle',
+        \BrainGames\Game\Calc\DESCRIPTION
+    );
 }

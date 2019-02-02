@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\Calc;
+namespace BrainGames\Game\Calc;
 
 const DESCRIPTION = 'What is the result of the expression?' ;
 const OPERATIONS = ['+', '-', '*'];
