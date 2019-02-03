@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const RIGHT_ANSWERS_FOR_WINNING = 3;
 
-function run($genRiddle = null, $description = '')
+function run($genRiddle, $description)
 {
     line('Welcome to the Brain Game!');
     line($description . PHP_EOL);
@@ -15,22 +15,21 @@ function run($genRiddle = null, $description = '')
     $name = prompt('May I have your name?', false, ' ');
     line("Hello, %s!" . PHP_EOL, $name);
 
-    if (is_null($genRiddle)) {
-        return;
-    }
-
     for ($step = 1; $step <= RIGHT_ANSWERS_FOR_WINNING; $step++) {
         $riddle = $genRiddle();
-        $question = $riddle['question'];
-        $correctAnswer = $riddle['answer'];
+        ['question' => $question, 'answer' => $correctAnswer] = $riddle;
 
         line('Question: %s', $question);
-        $answer = prompt('Your answer', false, ': ');
+        $playerAnswer = prompt('Your answer', false, ': ');
 
-        if ($answer === $correctAnswer) {
+        if ($playerAnswer === $correctAnswer) {
             line('Correct!');
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
+            line(
+                "'%s' is wrong answer ;(. Correct answer was '%s'.",
+                $playerAnswer,
+                $correctAnswer
+            );
             line("Let's try again, Bill!");
 
             return;

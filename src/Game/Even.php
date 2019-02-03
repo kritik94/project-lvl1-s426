@@ -4,15 +4,22 @@ namespace BrainGames\Game\Even;
 
 const DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".';
 
-function genRiddle()
+function runGame()
 {
-    $question = rand(1, 100);
-    $answer = isEven($question) ? 'yes' : 'no';
+    \BrainGames\Engine\run(getRiddleGenerator(), DESCRIPTION);
+}
 
-    return [
-        'question' => $question,
-        'answer' => $answer,
-    ];
+function getRiddleGenerator()
+{
+    return function () {
+        $question = rand(1, 100);
+        $answer = isEven($question) ? 'yes' : 'no';
+
+        return [
+            'question' => $question,
+            'answer' => $answer,
+        ];
+    };
 }
 
 function isEven($number)

@@ -5,19 +5,26 @@ namespace BrainGames\Game\Calc;
 const DESCRIPTION = 'What is the result of the expression?';
 const OPERATIONS = ['+', '-', '*'];
 
-function genRiddle()
+function runGame()
 {
-    $operation = chooseRand(OPERATIONS);
-    $leftOperand = rand(0, 10);
-    $rightOperand = rand(0, 10);
+    \BrainGames\Engine\run(getRiddleGenerator(), DESCRIPTION);
+}
 
-    $question = sprintf('%d %s %d', $leftOperand, $operation, $rightOperand);
-    $answer = (string) calcAnswer($operation, $leftOperand, $rightOperand);
+function getRiddleGenerator()
+{
+    return function () {
+        $operation = chooseRand(OPERATIONS);
+        $leftOperand = rand(0, 10);
+        $rightOperand = rand(0, 10);
 
-    return [
-        'question' => $question,
-        'answer' => $answer,
-    ];
+        $question = sprintf('%d %s %d', $leftOperand, $operation, $rightOperand);
+        $answer = (string) calcAnswer($operation, $leftOperand, $rightOperand);
+
+        return [
+            'question' => $question,
+            'answer' => $answer,
+        ];
+    };
 }
 
 function chooseRand($array)

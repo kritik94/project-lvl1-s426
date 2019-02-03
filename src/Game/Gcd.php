@@ -4,18 +4,25 @@ namespace BrainGames\Game\Gcd;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function genRiddle()
+function runGame()
 {
-    $firstNumber = rand(2, 100);
-    $secondNumber = rand(2, 100);
+    \BrainGames\Engine\run(getRiddleGenerator(), DESCRIPTION);
+}
 
-    $question = sprintf('%d %d', $firstNumber, $secondNumber);
-    $answer = (string) findGcd($firstNumber, $secondNumber);
+function getRiddleGenerator()
+{
+    return function () {
+        $firstNumber = rand(2, 100);
+        $secondNumber = rand(2, 100);
 
-    return [
-        'question' => $question,
-        'answer' => $answer,
-    ];
+        $question = sprintf('%d %d', $firstNumber, $secondNumber);
+        $answer = (string) findGcd($firstNumber, $secondNumber);
+
+        return [
+            'question' => $question,
+            'answer' => $answer,
+        ];
+    };
 }
 
 function findGcd(int $first, int $second)

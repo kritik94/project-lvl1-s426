@@ -4,14 +4,21 @@ namespace BrainGames\Game\Prime;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function genRiddle()
+function runGame()
 {
-    $questionNumber = rand(1, 100);
+    \BrainGames\Engine\run(getRiddleGenerator(), DESCRIPTION);
+}
 
-    return [
-        'question' => (string) $questionNumber,
-        'answer' => isPrime($questionNumber) ? 'yes' : 'no'
-    ];
+function getRiddleGenerator()
+{
+    return function () {
+        $questionNumber = rand(1, 100);
+
+        return [
+            'question' => (string) $questionNumber,
+            'answer' => isPrime($questionNumber) ? 'yes' : 'no'
+        ];
+    };
 }
 
 function isPrime($number)

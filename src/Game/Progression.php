@@ -3,23 +3,30 @@
 namespace BrainGames\Game\Progression;
 
 const DESCRIPTION = 'What number is missing in the progression?';
-const PROGRESSION_STEPS = 10;
+const PROGRESSION_LENGTH = 10;
 
-function genRiddle()
+function runGame()
 {
-    $startNumber = rand(1, 10);
-    $step = rand(1, 10);
-    $endNumber = $startNumber + $step * PROGRESSION_STEPS - 1;
-    $hidden = rand(1, 8);
+    \BrainGames\Engine\run(getRiddleGenerator(), DESCRIPTION);
+}
 
-    $progression = range($startNumber, $endNumber, $step);
-    $answer = (string) $progression[$hidden];
+function getRiddleGenerator()
+{
+    return function () {
+        $startNumber = rand(1, 10);
+        $step = rand(1, 10);
+        $endNumber = $startNumber + $step * PROGRESSION_LENGTH - 1;
+        $hiddenElementPosition = rand(0, PROGRESSION_LENGTH - 1);
 
-    $progression[$hidden] = '..';
-    $question = implode(' ', $progression);
+        $progression = range($startNumber, $endNumber, $step);
+        $answer = (string) $progression[$hiddenElementPosition];
 
-    return [
-        'question' => $question,
-        'answer' => $answer,
-    ];
+        $progression[$hiddenElementPosition] = '..';
+        $question = implode(' ', $progression);
+
+        return [
+            'question' => $question,
+            'answer' => $answer,
+        ];
+    };
 }
