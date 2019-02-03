@@ -30,7 +30,7 @@ function run($genRiddle, $description)
                 $playerAnswer,
                 $correctAnswer
             );
-            line("Let's try again, Bill!");
+            line("Let's try again, %s!", $name);
 
             return;
         }
